@@ -19,6 +19,7 @@
 		1BCD6AE12B26BAB7000A274D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6AE02B26BAB7000A274D /* TabViewController.swift */; };
 		1BCD6AE32B26BD62000A274D /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6AE22B26BD62000A274D /* CurrentWeatherView.swift */; };
 		1BCD6AE52B26BD9B000A274D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6AE42B26BD9B000A274D /* SettingsView.swift */; };
+		1BCD6AE72B26FEF5000A274D /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD6AE62B26FEF5000A274D /* SettingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		1BCD6AE02B26BAB7000A274D /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		1BCD6AE22B26BD62000A274D /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		1BCD6AE42B26BD9B000A274D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1BCD6AE62B26FEF5000A274D /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		1BCD6AD32B2694FC000A274D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1BCD6AE62B26FEF5000A274D /* SettingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				1BCD6AE52B26BD9B000A274D /* SettingsView.swift in Sources */,
 				1BCD6ADB2B269578000A274D /* IAPManager.swift in Sources */,
 				1BCD6AC22B2692BB000A274D /* WeatherViewController.swift in Sources */,
+				1BCD6AE72B26FEF5000A274D /* SettingViewModel.swift in Sources */,
 				1BCD6ABE2B2692BB000A274D /* AppDelegate.swift in Sources */,
 				1BCD6AC02B2692BB000A274D /* SceneDelegate.swift in Sources */,
 			);

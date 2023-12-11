@@ -7,7 +7,13 @@
 
 import UIKit
 
-class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
+final class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
+    
+    private var viewModel: SettingViewModel? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -38,6 +44,10 @@ class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func configure(with viewModel: SettingViewModel) {
+        self.viewModel = viewModel
+    }
+    
     // MARK : - TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -53,5 +63,10 @@ class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
         )
         cell.textLabel?.text = "Hello World"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("did select row")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
