@@ -74,7 +74,6 @@ final class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("did select row")
         tableView.deselectRow(at: indexPath, animated: true)
         guard let viewModel = viewModel else { return }
         let option = viewModel.options[indexPath.row]

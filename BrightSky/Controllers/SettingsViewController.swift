@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        primaryView.delegate = self
     }
     
     private func setupViews() {
@@ -31,5 +32,25 @@ class SettingsViewController: UIViewController {
             primaryView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             primaryView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+}
+
+extension SettingsViewController: SettingsViewDelegate {
+    func settingView(_ settingsView: SettingsView, didTap option: SettingOption) {
+        print("Tapped \(option.title)")
+        switch option {
+        case .upgrade:
+            break
+        case .privacyPolicy:
+            break
+        case .terms:
+            break
+        case .contact:
+            break
+        case .getHelp:
+            break
+        case .rateApp:
+            break
+        }
     }
 }
