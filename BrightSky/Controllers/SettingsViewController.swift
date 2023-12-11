@@ -8,10 +8,20 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    private let primaryView = SettingsView()
+    // anonymous closure to set up settings view with view model
+    private let primaryView: SettingsView = {
+        let view = SettingsView()
+        let viewModel = SettingViewModel(options: SettingOption.allCases)
+        view.configure(with: viewModel)
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    private func setupViews() {
         view.backgroundColor = .systemBackground
         
         view.addSubview(primaryView)

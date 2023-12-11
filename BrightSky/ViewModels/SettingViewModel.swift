@@ -11,7 +11,7 @@ struct SettingViewModel {
     let options: [SettingOption]
 }
 
-enum SettingOption {
+enum SettingOption: CaseIterable {
     case upgrade
     case privacyPolicy
     case terms
