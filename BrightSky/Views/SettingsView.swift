@@ -50,7 +50,7 @@ final class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     // MARK : - TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel?.options.count ?? 0
     }
     
     func tableView(
@@ -61,7 +61,9 @@ final class SettingsView: UIView, UITableViewDataSource, UITableViewDelegate {
             withIdentifier: "cell",
             for: indexPath
         )
-        cell.textLabel?.text = "Hello World"
+        if let viewModel {
+            cell.textLabel?.text = viewModel.options[indexPath.row].title
+        }
         return cell
     }
     
