@@ -13,4 +13,16 @@ struct CurrentWeatherCollectionViewCellViewModel {
     init(model: CurrentWeather) {
         self.model = model
     }
+    
+    public var condition: String {
+        return model.condition.description
+    }
+    
+    public var temperature: String {
+        return model.temperature.description
+    }
+    
+    public var iconName: String {
+        return model.symbolName
+    }
 }
