@@ -11,17 +11,49 @@ class DailyWeatherCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "DaileyWeatherCollectionViewCell"
     
+    private let tempLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 18, weight: .regular)
+        return label
+    }()
+    
+    private let timeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 22, weight: .bold)
+        return label
+    }()
+    
+    private let icon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .gray
+        contentView.backgroundColor = .tertiarySystemBackground
+        
+        contentView.addSubview(timeLabel)
+        contentView.addSubview(icon)
+        contentView.addSubview(tempLabel)
+        
+        addConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError()
     }
     
+    
     public func configure(with viewModel: DailyWeatherCollectionViewCellViewModel) {
-        
+        icon.image = UIImage(systemName: viewModel.iconName)
+        tempLabel.text = viewModel.temperature
+        timeLabel.text = viewModel.day
     }
     
     private func addConstraints() {
