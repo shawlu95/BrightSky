@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HourlyCollectionViewCell: UICollectionViewCell {
+class HourlyWeatherCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "HourlyWeatherCollectionViewCell"
     

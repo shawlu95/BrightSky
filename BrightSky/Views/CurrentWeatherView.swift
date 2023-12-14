@@ -40,8 +40,8 @@ class CurrentWeatherView: UIView {
                                 forCellWithReuseIdentifier: CurrentWeatherCollectionViewCell.cellIdentifier)
         collectionView.register(DailyWeatherCollectionViewCell.self,
                                 forCellWithReuseIdentifier: DailyWeatherCollectionViewCell.cellIdentifier)
-        collectionView.register(HourlyCollectionViewCell.self,
-                                forCellWithReuseIdentifier: HourlyCollectionViewCell.cellIdentifier)
+        collectionView.register(HourlyWeatherCollectionViewCell.self,
+                                forCellWithReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier)
         addSubview(collectionView)
         
         NSLayoutConstraint.activate([
@@ -125,7 +125,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
             case .hourly(let viewModels):
             
                 guard let cell = collectionView.dequeueReusableCell(
-                    withReuseIdentifier: HourlyCollectionViewCell.cellIdentifier, for: indexPath) as? HourlyCollectionViewCell else {
+                    withReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier, for: indexPath) as? HourlyWeatherCollectionViewCell else {
                     fatalError()
                 }
                 cell.configure(with: viewModels[indexPath.row])
