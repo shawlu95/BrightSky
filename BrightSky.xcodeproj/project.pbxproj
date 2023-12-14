@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B403CF02B2B0F7800C5CD52 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = file; name = Configuration.storekit; path = BrightSky/Configuration.storekit; sourceTree = SOURCE_ROOT; };
 		1BCD6ABA2B2692BB000A274D /* BrightSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCD6ABD2B2692BB000A274D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCD6ABF2B2692BB000A274D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			children = (
 				1BCD6AEA2B270AAE000A274D /* WeatherCell */,
 				1BCD6AE22B26BD62000A274D /* CurrentWeatherView.swift */,
+				1B403CF02B2B0F7800C5CD52 /* Configuration.storekit */,
 				1BCD6AE42B26BD9B000A274D /* SettingsView.swift */,
 			);
 			path = Views;
