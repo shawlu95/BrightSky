@@ -97,7 +97,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch viewModel[section] {
-        case .current(let viewModel):
+        case .current(_):
             return 1
         case .hourly(let viewModels):
             return viewModels.count
